@@ -1,24 +1,32 @@
-# README
+Twitter
+---
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+'Twitter'  microblogging and social networking service 
+on which users post and interact with messages known as "tweets".
 
-Things you may want to cover:
+---
+### System dependencies
+* [Ruby](https://www.ruby-lang.org/ru/downloads/) - 3.1.2
+* [PostgreSQL](https://www.postgresql.org/download/) - 14.2
+* Sqlite3 - 3.32.3
+* Rails - install via Gem
 
-* Ruby version
+---
+### Database creation
+```ruby
+rails db:create
+rails db:migrate
+```
 
-* System dependencies
+---
+### Deployment instructions
+Run `rails s` to start application server
 
-* Configuration
+---
+### Known issues
+PostgreSQL error may occur after starting app server.
+> psql: could not connect to server: No such file or directory <br>
+Is the server running locally and accepting
+connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Potential solving](https://stackoverflow.com/questions/13410686/postgres-could-not-connect-to-server)
