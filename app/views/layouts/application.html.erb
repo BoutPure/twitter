@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <title>Twitter</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,6 +11,18 @@
   </head>
 
   <body>
+  <div>
+    <p class="notice">notice: <%= notice %></p>
+    <p class="alert">alert: <%= alert %></p>
+    <% flash.each do |type, msg| %>
+      <div>
+        flash msg: <%= msg %>
+      </div>
+    <% end %>
+  </div>
     <%= yield %>
+  <div>
+    <%= link_to "To user_root", user_root_path %>
+  </div>
   </body>
 </html>
