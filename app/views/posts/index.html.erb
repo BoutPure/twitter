@@ -1,0 +1,15 @@
+<h1>Posts</h1>
+
+Our blog has <%= Post.status_public.count %> posts and counting!
+
+<ul>
+  <% @posts.each do |post| %>
+    <% unless post.status_archived? %>
+      <li>
+        <%= link_to post.title, post %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= link_to "New Post", new_post_path %>
