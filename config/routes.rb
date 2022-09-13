@@ -4,12 +4,11 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root "articles#index"
+  root "posts#index"
+
+  resources :posts
 
   get "/articles", to: "articles#index", as: 'user_root'
   get "/secured_page", to: "articles#secured_page"
 
-  # devise_scope :user do
-  #   delete 'logout', to: 'devise/sessions#destroy'
-  # end
 end
